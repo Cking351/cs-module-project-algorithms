@@ -6,9 +6,15 @@ Returns: a List of integers
 
 def product_of_all_other_numbers(arr):
     # Your code here
+    store = []
+    hold = 1
+    for i in arr:
+        hold *= i
 
-    pass
+    for j in range(len(arr)):
+        store.append(hold / arr[j])
 
+    return store
 
 if __name__ == '__main__':
     # Use the main function to test your implementation

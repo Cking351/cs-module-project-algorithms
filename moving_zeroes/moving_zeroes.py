@@ -14,7 +14,7 @@ def moving_zeroes(arr):
             new_arr.append(i)
         elif i < 0:
             new_arr.append(i)
-        elif i == 0:
+        else:
             zero_arr.append(i)
 
     new_arr.extend(zero_arr)
