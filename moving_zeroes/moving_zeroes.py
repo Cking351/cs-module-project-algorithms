@@ -4,21 +4,23 @@ Returns: a List of integers
 '''
 
 
+# Probably linear?
 def moving_zeroes(arr):
     # Your code here
-    new_arr = []
+    store = []
     zero_arr = []
-    arr.sort()
+    # Append everything but the zeros first
     for i in arr:
         if i > 0:
-            new_arr.append(i)
+            store.append(i)
         elif i < 0:
-            new_arr.append(i)
+            store.append(i)
         else:
+            # Finally append the zeros to the zero_arr
             zero_arr.append(i)
-
-    new_arr.extend(zero_arr)
-    return new_arr
+    # Add zero array to the end of store list
+    store.extend(zero_arr)
+    return store
 
 
 if __name__ == '__main__':

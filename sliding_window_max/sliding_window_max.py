@@ -4,11 +4,16 @@ Returns: a List of integers
 '''
 
 
+# Linear
 def sliding_window_max(nums, k):
     # Your code here
     store = []
-    for i in range(len(nums) - k + 1):
-        store.append(max(nums[i:k+i]))
+    head = 0
+    tail = k
+    while tail <= len(nums):
+        store.append(max(nums[head:tail]))
+        head += 1
+        tail += 1
     return store
 
 

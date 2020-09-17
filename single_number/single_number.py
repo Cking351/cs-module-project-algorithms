@@ -4,14 +4,12 @@ Returns: an integer
 '''
 
 
+# Linear
 def single_number(arr):
     # Your code here
     for i in arr:
-        store = 0
-        for j in arr:
-            if i == j:
-                store += 1
-        if store == 1:
+        # If it only happens once, return it
+        if arr.count(i) == 1:
             return i
 
 
